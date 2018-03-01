@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGAcademyMVC", "TGAcademyMVC\TGAcademyMVC.csproj", "{D67B80F6-6359-448F-A391-AD9ABA63C72F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TGAcademyMVC", "TGAcademyMVC\TGAcademyMVC.csproj", "{D67B80F6-6359-448F-A391-AD9ABA63C72F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGAcademyMVC_UnitTests", "TGAcademyMVC_UnitTests\TGAcademyMVC_UnitTests.csproj", "{B977CF49-8055-4706-9D12-F0E2DDA8FA72}"
 	ProjectSection(ProjectDependencies) = postProject
