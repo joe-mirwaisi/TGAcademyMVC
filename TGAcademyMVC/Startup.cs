@@ -20,6 +20,9 @@ using Microsoft.AspNetCore.Authentication.OAuth;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
+
 
 namespace TGAcademyMVC
 {
@@ -63,8 +66,8 @@ namespace TGAcademyMVC
        .AddCookie()
        .AddOAuth("GitHub", options =>
        {
-           options.ClientId = "ced302c68a0daca68574";
-           options.ClientSecret = "9bf9fe57e09c7b7d6511e98602df5c2b187eca36";
+           options.ClientId = "90b03f348d041ec189f0";
+           options.ClientSecret = "a2ba9b2efa3b7c6b9ee3e26fc63f044017a0bd69";
            options.CallbackPath = new PathString("/signin-github");
 
            options.AuthorizationEndpoint = "https://github.com/login/oauth/authorize";
@@ -95,6 +98,8 @@ namespace TGAcademyMVC
            };
        });
 
+            var serviceProvider = services.BuildServiceProvider();
+            CreateRoles(serviceProvider);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -121,6 +126,49 @@ namespace TGAcademyMVC
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        private void CreateRoles(IServiceProvider serviceProvider)
+        {
+            //initializing custom roles 
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+            string[] roleNames = { "Prospective_Student", "Current_Student", "Mentor", "Admin", };
+            Task<IdentityResult> roleResult;
+
+            foreach (var roleName in roleNames)
+            {
+                Task<bool> roleExist = roleManager.RoleExistsAsync(roleName);
+                if (!roleExist.Result)
+                {
+                    //create the roles and seed them to the database: Question 1
+                    roleResult = roleManager.CreateAsync(new IdentityRole(roleName));
+                    roleResult.Wait();
+                }
+            }
+
+            ApplicationUser[] testUsers = {
+            new ApplicationUser { UserName = "test_ps", Email = "test_ps@techtonicgroup.com", },
+            new ApplicationUser { UserName = "test_cs", Email = "test_cs@techtonicgroup.com", },
+            new ApplicationUser { UserName = "test_mentor", Email = "test_mentor@techtonicgroup.com", },
+            new ApplicationUser { UserName = "test_admin", Email = "test_admin@techtonicgroup.com", }
+        };
+            //{new ApplicationUser( UserName = "test_ps", Email = "test_ps@techtonicgroup.com" )};
+
+            //Ensure you have these values in your appsettings.json file
+            string userPWD = "Password123!";
+            for (int i = 0; i < testUsers.Length; i++)
+            {
+                Task<ApplicationUser> user = userManager.FindByEmailAsync(testUsers[i].Email);
+                user.Wait();
+                if (user == null)
+                {
+                    var newTestUser = userManager.CreateAsync(testUsers[i], userPWD);
+                    newTestUser.Wait();
+                    var assignToRole = userManager.AddToRoleAsync(testUsers[i], roleNames[i]);
+                    assignToRole.Wait();
+                }
+            }
         }
     }
 }
