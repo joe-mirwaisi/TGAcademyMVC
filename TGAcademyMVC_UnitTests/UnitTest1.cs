@@ -10,5 +10,11 @@ namespace TGAcademyMVC_UnitTests
         public void TestMethod1()
         {
         }
+
+        [TestMethod]
+        public void CheckForTestUsersAndRoles()
+        {
+
+        }
     }
 }

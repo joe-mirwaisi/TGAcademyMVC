@@ -153,7 +153,6 @@ namespace TGAcademyMVC
             new ApplicationUser { UserName = "test_mentor", Email = "test_mentor@techtonicgroup.com", },
             new ApplicationUser { UserName = "test_admin", Email = "test_admin@techtonicgroup.com", }
         };
-            //{new ApplicationUser( UserName = "test_ps", Email = "test_ps@techtonicgroup.com" )};
 
             //Ensure you have these values in your appsettings.json file
             string userPWD = "Password123!";
@@ -161,13 +160,17 @@ namespace TGAcademyMVC
             {
                 Task<ApplicationUser> user = userManager.FindByEmailAsync(testUsers[i].Email);
                 user.Wait();
-                if (user == null)
+                if (user.Result == null)
                 {
                     var newTestUser = userManager.CreateAsync(testUsers[i], userPWD);
                     newTestUser.Wait();
-                    var assignToRole = userManager.AddToRoleAsync(testUsers[i], roleNames[i]);
-                    assignToRole.Wait();
+                } else
+                {
+                    testUsers[i].Id = user.Result.Id;
                 }
+
+                var assignToRole = userManager.AddToRoleAsync(testUsers[i], roleNames[i]);
+                assignToRole.Wait();
             }
         }
     }
