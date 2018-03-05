@@ -133,7 +133,7 @@ namespace TGAcademyMVC
             //initializing custom roles 
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-            string[] roleNames = { "Prospective_Student", "Current_Student", "Mentor", "Admin", };
+            string[] roleNames = { "Prospective_Student", "Current_Student", "Mentor", "Admin" };
             Task<IdentityResult> roleResult;
 
             foreach (var roleName in roleNames)
