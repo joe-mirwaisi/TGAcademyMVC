@@ -24,75 +24,54 @@ namespace TGAcademyMVC
 {
     public static class Helpers
     {
-        public static void ConfigureServices(IServiceCollection services, IConfiguration configuration) {
-            if (configuration == null) {
-                var builder = new ConfigurationBuilder()
-                            .SetBasePath(Directory.GetCurrentDirectory())
-                            .AddJsonFile("appsettings.json");
+        public static void CreateRoles(IServiceCollection services)
+        {
+            var serviceProvider = services.BuildServiceProvider();
 
-                configuration = builder.Build();
+            //initializing custom roles 
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+            string[] roleNames = { "Prospective_Student", "Current_Student", "Mentor", "Admin", };
+            Task<IdentityResult> roleResult;
+
+            foreach (var roleName in roleNames)
+            {
+                Task<bool> roleExist = roleManager.RoleExistsAsync(roleName);
+                roleExist.Wait();
+                if (!roleExist.Result)
+                {
+                    //create the roles and seed them to the database: Question 1
+                    roleResult = roleManager.CreateAsync(new IdentityRole(roleName));
+                    roleResult.Wait();
+                }
             }
 
+            ApplicationUser[] testUsers = {
+                new ApplicationUser { UserName = "test_ps", Email = "test_ps@techtonicgroup.com", },
+                new ApplicationUser { UserName = "test_cs", Email = "test_cs@techtonicgroup.com", },
+                new ApplicationUser { UserName = "test_mentor", Email = "test_mentor@techtonicgroup.com", },
+                new ApplicationUser { UserName = "test_admin", Email = "test_admin@techtonicgroup.com", }
+            };
 
-            services.Configure<MvcOptions>(options =>
+            //Ensure you have these values in your appsettings.json file
+            string userPWD = "Password123!";
+            for (int i = 0; i < testUsers.Length; i++)
             {
-                options.Filters.Add(new RequireHttpsAttribute());
-            });
-
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
-
-            // Add application services.
-            services.AddTransient<IEmailSender, EmailSender>();
-
-            services.AddMvc();
-
-            AuthenticationBuilder ab = new AuthenticationBuilder(services);
-
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = "GitHub";
-            })
-            .AddCookie()
-            .AddOAuth("GitHub", options =>
-            {
-                options.ClientId = "ced302c68a0daca68574";
-                options.ClientSecret = "9bf9fe57e09c7b7d6511e98602df5c2b187eca36";
-                options.CallbackPath = new PathString("/signin-github");
-
-                options.AuthorizationEndpoint = "https://github.com/login/oauth/authorize";
-                options.TokenEndpoint = "https://github.com/login/oauth/access_token";
-                options.UserInformationEndpoint = "https://api.github.com/user";
-
-                options.ClaimActions.MapJsonKey(ClaimTypes.NameIdentifier, "id");
-                options.ClaimActions.MapJsonKey(ClaimTypes.Name, "name");
-                options.ClaimActions.MapJsonKey("urn:github:login", "login");
-                options.ClaimActions.MapJsonKey("urn:github:url", "html_url");
-                options.ClaimActions.MapJsonKey("urn:github:avatar", "avatar_url");
-
-                options.Events = new OAuthEvents
+                Task<ApplicationUser> user = userManager.FindByEmailAsync(testUsers[i].Email);
+                user.Wait();
+                if (user.Result == null)
                 {
-                    OnCreatingTicket = async context =>
-                    {
-                        var request = new HttpRequestMessage(HttpMethod.Get, context.Options.UserInformationEndpoint);
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", context.AccessToken);
+                    var newTestUser = userManager.CreateAsync(testUsers[i], userPWD);
+                    newTestUser.Wait();
+                }
+                else
+                {
+                    testUsers[i].Id = user.Result.Id;
+                }
 
-                        var response = await context.Backchannel.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, context.HttpContext.RequestAborted);
-                        response.EnsureSuccessStatusCode();
-
-                        var user = JObject.Parse(await response.Content.ReadAsStringAsync());
-
-                        context.RunClaimActions(user);
-                    }
-                };
-            });
+                var assignToRole = userManager.AddToRoleAsync(testUsers[i], roleNames[i]);
+                assignToRole.Wait();
+            }
         }
     }
 }

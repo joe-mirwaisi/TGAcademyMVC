@@ -24,7 +24,7 @@ namespace TGAcademyMVC_UnitTests
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-            Startup.CreateRoles(services);
+            Helpers.CreateRoles(services);
         }
     }
 }
