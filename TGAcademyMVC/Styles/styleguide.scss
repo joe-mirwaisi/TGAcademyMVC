@@ -1,0 +1,179 @@
+﻿$accent-lightest: #CFE7AE;
+$accent-light: #A0C074;
+$accent-primary: #7B9F49;
+$accent-dark: #5F842C;
+
+body {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.icon {
+    display: inline;
+    margin-right: 5px;
+}
+
+/* FONTS */
+h1, h2, h3, h4, h5, h6, li, a, button {
+    font-family: 'Share Tech', sans-serif, Helvetica, Arial, sans-serif;
+}
+/* COLORS */
+
+
+.square {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 10px;
+    color: white;
+}
+
+.base-color--primary {
+    background-color: #2d2d2d;
+}
+
+.base-color--secondary {
+    background-color: #595959;
+}
+
+.base-color--tertiary {
+    background-color: #bcbcbc;
+}
+
+.base-color--quarternary {
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.accent-color--primary {
+    background-color: $accent-primary;
+}
+.accent-color--secondary {
+    background-color: $accent-lightest;
+}
+
+.accent-color--tertiary {
+    background-color: $accent-light;
+}
+
+.accent-color--quarternary {
+    background-color: $accent-dark;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+    background-color: #595959;
+}
+
+.breadcrumb-item.active {
+    color: white;
+}
+
+.breadcrumb-item > a {
+    color: $accent-light;
+}
+
+/* BUTTONS */
+.btn-outline-primary {
+    color: $accent-primary;
+    background-color: transparent;
+    background-image: none;
+    border-color: $accent-primary;
+}
+
+.btn-outline-primary:hover {
+    color: white;
+    border-color: $accent-primary;
+    background-color: $accent-primary;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show > .btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: $accent-primary;
+    border-color: $accent-primary;
+}
+
+.btn-outline-primary.focus, .btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(64, 97, 18,.5);
+}
+
+.btn-primary {
+    background-color: $accent-primary;
+    border-color: $accent-primary;
+}
+
+.btn-primary:hover {
+    background-color: $accent-dark;
+    border-color: $accent-dark;
+}
+
+/* FORMS */
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: $accent-lightest;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(160, 192, 116,.25);
+}
+
+
+/* BADGES */
+.badge-primary {
+    color: #fff;
+    background-color: $accent-dark;
+}
+
+/* TAB PANE */
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: $accent-light;
+    border-color: $accent-light;
+}
+
+/* PAGINATION */
+.page-link {
+    color: $accent-primary;
+}
+
+.page-link:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: $accent-primary;
+    border-color: $accent-primary;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: $accent-primary;
+    border-color: $accent-primary;
+}
+
+/* PROGRESS */
+.progress {
+    margin: 5px;
+}
+
+.progress-bar {
+    background-color: $accent-primary;
+}
+
+.bg-success {
+    background-color: $accent-lightest !important;
+}
+
+.bg-info {
+    background-color: $accent-light !important;
+}
+
+.bg-warning {
+    background-color: $accent-primary !important;
+}
+
+.bg-danger {
+    background-color: $accent-dark !important;
+}
