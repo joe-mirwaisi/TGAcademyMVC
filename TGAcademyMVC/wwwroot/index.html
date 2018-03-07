@@ -97,19 +97,22 @@
     <hr>
     <!--Buttons-->
     <h2>Buttons</h2>
-    <button type="button" class="btn btn-outline-primary">Primary</button>
-    <button type="button" class="btn btn-outline-secondary">Secondary</button>
-    <button type="button" class="btn btn-outline-success">Success</button>
-    <button type="button" class="btn btn-outline-danger">Danger</button>
-    <button type="button" class="btn btn-outline-warning">Warning</button>
-    <button type="button" class="btn btn-outline-info">Info</button>
-
-    <button type="button" class="btn btn-block btn-outline-primary">Primary</button>
-    <button type="button" class="btn btn-block btn-outline-secondary">Secondary</button>
-    <button type="button" class="btn btn-block btn-outline-success">Success</button>
-    <button type="button" class="btn btn-block btn-outline-danger">Danger</button>
-    <button type="button" class="btn btn-block btn-outline-warning">Warning</button>
-    <button type="button" class="btn btn-block btn-outline-info">Info</button>
+    <div class="margin-bottom__10">
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+    </div>
+    <div class="margin-bottom__10">
+        <button type="button" class="btn btn-block btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-block btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-block btn-outline-success">Success</button>
+        <button type="button" class="btn btn-block btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-block btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-block btn-outline-info">Info</button>
+    </div>
 
     <hr>
     <!--Cards-->
@@ -174,6 +177,42 @@
             Disabled radio
         </label>
     </div>
+
+    <form class="card b0 form-validate" id="user-signup" action="" name="createForm" novalidate="">
+        <div class="card-offset pb0">
+            <div class="card-offset-item text-right">
+                <div class="btn btn-success btn-circle btn-lg hidden" id="form-ok"><em class="ion-checkmark-round"></em></div>
+            </div>
+        </div>
+        <div class="card-heading">
+            <div class="card-title text-center">Create account</div>
+        </div>
+        <div class="card-body">
+            <div class="mda-form-group float-label mda-input-group">
+                <div class="mda-form-control">
+                    <input class="form-control" type="email" name="accountName" required="">
+                    <div class="mda-form-control-line"></div>
+                    <label>Email address</label>
+                </div><span class="mda-input-group-addon"><em class="ion-ios-email-outline icon-lg"></em></span>
+            </div>
+            <div class="mda-form-group float-label mda-input-group">
+                <div class="mda-form-control">
+                    <input class="form-control" id="account-password" type="password" name="accountPassword" required="">
+                    <div class="mda-form-control-line"></div>
+                    <label>Password</label>
+                </div><span class="mda-input-group-addon"><em class="ion-ios-locked-outline icon-lg"></em></span>
+            </div>
+            <div class="mda-form-group float-label mda-input-group">
+                <div class="mda-form-control">
+                    <input class="form-control" type="password" name="accountPasswordCheck" required="">
+                    <div class="mda-form-control-line"></div>
+                    <label>Confirm password</label>
+                </div><span class="mda-input-group-addon"><em class="ion-ios-locked-outline icon-lg"></em></span>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-flat" type="submit">Create</button>
+        <div class="card-body bg-gray-lighter text-center text-sm"><span class="spr">By registering I accept the</span><a class="spr" href="#">Terms of Service</a><span class="spr">and</span><a class="spr" href="#">Privacy</a></div>
+    </form>
 
     <hr>
     <!--Jumbotron-->

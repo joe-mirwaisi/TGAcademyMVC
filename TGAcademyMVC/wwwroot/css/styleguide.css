@@ -57,9 +57,14 @@ h1, h2, h3, h4, h5, h6, li, a, button {
   color: #A0C074; }
 
 /* BUTTONS */
+.margin-bottom__10 {
+  margin-bottom: 10px; }
+
+.btn-outline-primary, .btn-outline-secondary, .btn-outline-success, .btn-outline-warning, .btn-outline-info, .btn-outline-danger {
+  background-color: #2d2d2d; }
+
 .btn-outline-primary {
   color: #7B9F49;
-  background-color: transparent;
   background-image: none;
   border-color: #7B9F49; }
 
