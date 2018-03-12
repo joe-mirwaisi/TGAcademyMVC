@@ -14,7 +14,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -43,12 +45,16 @@ namespace TGAcademyMVC
                 options.Filters.Add(new RequireHttpsAttribute());
             });
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddEntityFrameworkSqlServer()
+                .AddDbContext<ApplicationDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, ApplicationRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            //does this let me get to the DbContext?
+            //services.AddScoped<ApplicationDbContext>();
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
@@ -99,6 +105,7 @@ namespace TGAcademyMVC
             });
 
             //Helpers.CreateRoles(services);
+                        
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

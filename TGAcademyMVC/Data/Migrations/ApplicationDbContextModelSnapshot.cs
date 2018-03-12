@@ -193,11 +193,29 @@ namespace TGAcademyMVC.Data.Migrations
 
                     b.Property<bool>("Key5");
 
-                    b.Property<Guid>("UserID");
+                    b.Property<string>("UserID");
 
                     b.HasKey("ID");
 
                     b.ToTable("Checklists");
+                });
+
+            modelBuilder.Entity("TGAcademyMVC.Models.Widget", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Key");
+
+                    b.Property<bool>("Key_Value");
+
+                    b.Property<string>("UserID");
+
+                    b.Property<string>("xml");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Widgets");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>

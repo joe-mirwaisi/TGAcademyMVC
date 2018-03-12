@@ -8,5 +8,11 @@ namespace TGAcademyMVC.Models
 {
     public class ApplicationRole : IdentityRole<Guid>
     {
+        public ApplicationRole()
+        {
+        }
+        public ApplicationRole(string name):base(name)
+        {
+        }
     }
 }

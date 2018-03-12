@@ -11,8 +11,8 @@ using TGAcademyMVC.Data;
 namespace TGAcademyMVC.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180308182056_TGAcademyMVC")]
-    partial class TGAcademyMVC
+    [Migration("20180309215620_Widget")]
+    partial class Widget
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -194,11 +194,29 @@ namespace TGAcademyMVC.Data.Migrations
 
                     b.Property<bool>("Key5");
 
-                    b.Property<Guid>("UserID");
+                    b.Property<string>("UserID");
 
                     b.HasKey("ID");
 
                     b.ToTable("Checklists");
+                });
+
+            modelBuilder.Entity("TGAcademyMVC.Models.Widget", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Key");
+
+                    b.Property<bool>("Key_Value");
+
+                    b.Property<string>("UserID");
+
+                    b.Property<string>("xml");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Widgets");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
