@@ -1,0 +1,23 @@
+﻿@model Dictionary<string, bool>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<form  action="Update" method="post">
+    <ul>
+       
+        @foreach (KeyValuePair<string, bool> item in Model)
+        {
+            <li>@Html.CheckBoxFor(m => item.Value, new { Name = item.Key})@item.Key</li>
+            @*string isChecked = "";
+            if(item.Value)
+            {
+                isChecked = "checked";
+            }
+            <li><input type="checkbox" checked =@isChecked id=@item.Key/>@item.Key</li>*@
+        }
+    </ul>
+
+    <input id="Submit1" type="submit" value="Update" />
+</form>

@@ -16,9 +16,9 @@ namespace TGAcademyMVC.Data
             : base(options)
         {
         }
-        //public ApplicationDbContext() 
-        //{
-        //}
+        public ApplicationDbContext() :base()
+        {
+        }
 
         public DbSet<Widget> Widgets { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)

@@ -15,8 +15,8 @@ namespace TGAcademyMVC.Models
 {
     public class Checklist
     {
-        private IHttpContextAccessor _contextAccessor;
-        private HttpContext _context { get { return _contextAccessor.HttpContext; } }
+        //private IHttpContextAccessor _contextAccessor;
+        //private HttpContext _context { get { return _contextAccessor.HttpContext; } }
         public Dictionary<string, bool> ChecklistValues
         {
             get
@@ -40,12 +40,18 @@ namespace TGAcademyMVC.Models
 
         public Dictionary<string,bool> GetChecklistValues()
         {
+            
             Dictionary<string, bool> dictionary = new Dictionary<string, bool>();
-            if(_context != null)
+            //if(_context != null)
+            //{
+            //    if(_context.User != null)
+            //    {
+                    // var userID = _context.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+                    var userID = "91c0c1fe-156f-4a5f-a9da-8db9cc325aca";
+            try
             {
-                if(_context.User != null)
-                {
-                    var userID = _context.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            
                     using (var context = new ApplicationDbContext())
                     {
                         var hasEntry = context.Widgets.Where(w => w.UserID == userID).AnyAsync();
@@ -76,7 +82,11 @@ namespace TGAcademyMVC.Models
                         }
                     }
                 }
+            catch (Exception ex)
+            {
+                throw ex;
             }
+            //}
             return dictionary;
                 
         }
