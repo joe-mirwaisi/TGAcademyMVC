@@ -1,0 +1,134 @@
+/**
+ * Modals
+ */
+.modal-header,
+.modal-footer {
+  border-color: rgba(162, 162, 162, 0.12); }
+
+.modal.modal-right .modal-dialog,
+.modal.modal-left .modal-dialog,
+.modal.modal-bottom .modal-dialog,
+.modal.modal-top .modal-dialog {
+  position: absolute;
+  margin: 0;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: -o-transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .modal.modal-right .modal-dialog > .modal-content,
+  .modal.modal-left .modal-dialog > .modal-content,
+  .modal.modal-bottom .modal-dialog > .modal-content,
+  .modal.modal-top .modal-dialog > .modal-content {
+    border-radius: 0;
+    border: 0; }
+
+.modal.modal-right.fade.in .modal-dialog,
+.modal.modal-left.fade.in .modal-dialog,
+.modal.modal-bottom.fade.in .modal-dialog,
+.modal.modal-top.fade.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0); }
+
+.modal.fade.modal-right .modal-dialog,
+.modal.fade.modal-left .modal-dialog,
+.modal.fade.modal-bottom .modal-dialog,
+.modal.fade.modal-top .modal-dialog {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: -o-transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+.modal.modal-right .modal-dialog {
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 240px; }
+  .modal.modal-right .modal-dialog > .modal-content {
+    min-height: 100%; }
+
+.modal.modal-right.modal-auto-size .modal-dialog {
+  width: 80%; }
+  @media only screen and (min-width: 768px) {
+    .modal.modal-right.modal-auto-size .modal-dialog {
+      width: 50%; } }
+
+.modal.modal-right.fade .modal-dialog {
+  -webkit-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  -o-transform: translate(100%, 0);
+  transform: translate(100%, 0); }
+
+.modal.modal-left .modal-dialog {
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 240px; }
+  .modal.modal-left .modal-dialog > .modal-content {
+    min-height: 100%; }
+
+.modal.modal-left.modal-auto-size .modal-dialog {
+  width: 80%; }
+  @media only screen and (min-width: 768px) {
+    .modal.modal-left.modal-auto-size .modal-dialog {
+      width: 50%; } }
+
+.modal.modal-left.fade .modal-dialog {
+  -webkit-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  -o-transform: translate(-100%, 0);
+  transform: translate(-100%, 0); }
+
+.modal.modal-top .modal-dialog {
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%; }
+  .modal.modal-top .modal-dialog > .modal-content {
+    width: 100%; }
+
+.modal.modal-top.fade .modal-dialog {
+  -webkit-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
+  transform: translate(0, -100%); }
+
+.modal.modal-bottom .modal-dialog {
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%; }
+  .modal.modal-bottom .modal-dialog > .modal-content {
+    width: 100%; }
+
+.modal.modal-bottom.fade .modal-dialog {
+  -webkit-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  -o-transform: translate(0, 100%);
+  transform: translate(0, 100%); }
+
+.modal-content {
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.14), 0 0 2px 2px rgba(0, 0, 0, 0.098), 0 0 5px 1px rgba(0, 0, 0, 0.084); }
+
+.modal-backdrop {
+  opacity: 0;
+  will-change: opacity; }
+  .modal-backdrop.in {
+    -webkit-transition: opacity 0.28s ease-in-out;
+    -o-transition: opacity 0.28s ease-in-out;
+    transition: opacity 0.28s ease-in-out; }
+
+.modal-backdrop-light .modal-backdrop {
+  background-color: #fff; }
+  .modal-backdrop-light .modal-backdrop.in {
+    opacity: 0.9;
+    filter: alpha(opacity=90); }
+
+.modal-backdrop-soft .modal-backdrop.in {
+  opacity: 0.3;
+  filter: alpha(opacity=30); }
+
+.modal-backdrop {
+  position: fixed;
+  bottom: 0; }

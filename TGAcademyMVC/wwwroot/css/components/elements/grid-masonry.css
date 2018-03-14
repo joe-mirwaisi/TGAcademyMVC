@@ -1,0 +1,54 @@
+/**
+ * Grid Masonry Deck
+ */
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/* ---- Masonry grid -- customize percentage values ---- */
+.grid-sizer,
+.grid-item {
+  width: 50%; }
+
+@media only screen and (min-width: 768px) {
+  .grid-sizer,
+  .grid-item {
+    width: 33.3333%; } }
+
+@media only screen and (min-width: 992px) {
+  .grid-sizer,
+  .grid-item {
+    width: 25%; } }
+
+.grid-item {
+  float: left; }
+
+.photo {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  margin: 0 10px 10px 0;
+  position: relative;
+  -webkit-transition: box-shadow 0.2s ease;
+  -o-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease; }
+  .photo:hover {
+    -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.14), 0 6px 10px 0 rgba(0, 0, 0, 0.098), 0 1px 18px 0 rgba(0, 0, 0, 0.014);
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.14), 0 6px 10px 0 rgba(0, 0, 0, 0.098), 0 1px 18px 0 rgba(0, 0, 0, 0.014); }
+  .photo .photo-loader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 40%;
+    z-index: 1; }
+  .photo img {
+    position: relative;
+    z-index: 2; }
+  .photo .photo-wrapper {
+    min-height: 100px; }
+  .photo .photo-description {
+    padding: 15px; }

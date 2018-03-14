@@ -127,7 +127,15 @@ h1, h2, h3, h4, h5, h6, li, a, button {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(160, 192, 116,.25);
 }
+.btn-flat.btn-primary {
+    color: white;
+}
 
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: $accent-dark;
+    border-color: $accent-dark;
+}
 
 /* BADGES */
 .badge-primary {

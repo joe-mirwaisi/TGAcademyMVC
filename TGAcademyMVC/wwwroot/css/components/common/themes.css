@@ -1,0 +1,317 @@
+/**
+ * Themes
+ */
+.theme-1 .layout-container > aside {
+  background-color: #fff;
+  color: #6C7177; }
+  .theme-1 .layout-container > aside > .sidebar-header {
+    background-color: #1976D2;
+    color: #fff; }
+
+.theme-1 .layout-container > header {
+  background-color: #1976D2;
+  color: #fff; }
+
+.theme-2 .layout-container > aside {
+  background-color: #263238;
+  color: #fff; }
+  .theme-2 .layout-container > aside > .sidebar-header {
+    background-color: #263238;
+    color: #fff; }
+
+.theme-2 .layout-container > header {
+  background-color: #1976D2;
+  color: #fff; }
+
+.theme-2 .layout-container > main {
+  background-color: #ECEFF1; }
+
+.theme-3 {
+  background-color: #2f3c43; }
+  .theme-3 .layout-container > aside {
+    background-color: #263238;
+    color: #fff; }
+    .theme-3 .layout-container > aside > .sidebar-header {
+      background-color: #263238;
+      color: #fff; }
+  .theme-3 .layout-container > header {
+    background-color: #37474F;
+    color: #fff; }
+  .theme-3 .layout-container > main {
+    background-color: #2f3c43;
+    color: #f1f1f1; }
+    .theme-3 .layout-container > main .bg-white:not([class*='bg-']),
+    .theme-3 .layout-container > main .panel:not([class*='bg-']),
+    .theme-3 .layout-container > main .card:not([class*='bg-']),
+    .theme-3 .layout-container > main .panel-default > .panel-heading:not([class*='bg-']) {
+      background-color: #35444c;
+      color: inherit; }
+    .theme-3 .layout-container > main .bg-white {
+      background-color: #35444c;
+      color: inherit; }
+    .theme-3 .layout-container > main .well, .theme-3 .layout-container > main .jumbotron, .theme-3 .layout-container > main .breadcrumb, .theme-3 .layout-container > main .modal-content {
+      background-color: #35444c;
+      color: inherit; }
+    .theme-3 .layout-container > main .btn-default {
+      color: #fff;
+      background-color: #37474F;
+      border-color: #2d3940; }
+      .theme-3 .layout-container > main .btn-default:focus, .theme-3 .layout-container > main .btn-default.focus {
+        color: #fff;
+        background-color: #2f3c43;
+        border-color: #242f34; }
+      .theme-3 .layout-container > main .btn-default:hover {
+        color: #fff;
+        background-color: #2f3c43;
+        border-color: #242f34; }
+      .theme-3 .layout-container > main .btn-default:active, .theme-3 .layout-container > main .btn-default.active,
+      .open > .theme-3 .layout-container > main .btn-default.dropdown-toggle {
+        color: #fff;
+        background-color: #263137;
+        border-color: #2a373d; }
+        .theme-3 .layout-container > main .btn-default:active:hover, .theme-3 .layout-container > main .btn-default:active:focus, .theme-3 .layout-container > main .btn-default:active.focus, .theme-3 .layout-container > main .btn-default.active:hover, .theme-3 .layout-container > main .btn-default.active:focus, .theme-3 .layout-container > main .btn-default.active.focus,
+        .open > .theme-3 .layout-container > main .btn-default.dropdown-toggle:hover,
+        .open > .theme-3 .layout-container > main .btn-default.dropdown-toggle:focus,
+        .open > .theme-3 .layout-container > main .btn-default.dropdown-toggle.focus {
+          color: #fff;
+          background-color: #263137;
+          border-color: #2a373d; }
+      .theme-3 .layout-container > main .btn-default:active, .theme-3 .layout-container > main .btn-default.active,
+      .open > .theme-3 .layout-container > main .btn-default.dropdown-toggle {
+        background-image: none; }
+      .theme-3 .layout-container > main .btn-default.disabled:hover, .theme-3 .layout-container > main .btn-default.disabled:focus, .theme-3 .layout-container > main .btn-default.disabled.focus, .theme-3 .layout-container > main .btn-default[disabled]:hover, .theme-3 .layout-container > main .btn-default[disabled]:focus, .theme-3 .layout-container > main .btn-default[disabled].focus,
+      fieldset[disabled] .theme-3 .layout-container > main .btn-default:hover,
+      fieldset[disabled] .theme-3 .layout-container > main .btn-default:focus,
+      fieldset[disabled] .theme-3 .layout-container > main .btn-default.focus {
+        background-color: #37474F;
+        border-color: #2d3940; }
+      .theme-3 .layout-container > main .btn-default .badge {
+        color: #37474F;
+        background-color: #fff; }
+    .theme-3 .layout-container > main .open > .dropdown-toggle.btn-default, .theme-3 .layout-container > main .open > .dropdown-toggle.btn-default:hover, .theme-3 .layout-container > main .open > .dropdown-toggle.btn-default:active, .theme-3 .layout-container > main .open > .dropdown-toggle.btn-default.active, .theme-3 .layout-container > main .open > .dropdown-toggle.btn-default:focus {
+      color: #fff;
+      background-color: #37474F;
+      border-color: #2d3940; }
+    .theme-3 .layout-container > main .form-control {
+      color: inherit;
+      background-color: rgba(240, 240, 240, 0.1);
+      border-color: rgba(240, 240, 240, 0.12); }
+      .theme-3 .layout-container > main .form-control:focus {
+        border-color: rgba(240, 240, 240, 0.36); }
+    .theme-3 .layout-container > main .form-control[disabled],
+    .theme-3 .layout-container > main .form-control[readonly],
+    .theme-3 .layout-container > main fieldset[disabled] .form-control {
+      background-color: rgba(240, 240, 240, 0.1); }
+    .theme-3 .layout-container > main select:not([multiple]) option {
+      color: #6C7177; }
+    .theme-3 .layout-container > main .input-group-addon,
+    .theme-3 .layout-container > main .input-group-button {
+      background-color: transparent;
+      border: 1px solid rgba(162, 162, 162, 0.26);
+      color: inherit; }
+    .theme-3 .layout-container > main .nav-tabs > li.active {
+      color: #fff; }
+    .theme-3 .layout-container > main .note-editor .note-editing-area .note-editable {
+      background-color: rgba(240, 240, 240, 0.1); }
+    .theme-3 .layout-container > main .photo {
+      background-color: #37474F; }
+  .theme-3 .sidebar-header-logo > svg, .theme-3 .sidebar-header-logo > em,
+  .theme-3 .nav-icon > svg,
+  .theme-3 .nav-icon > em {
+    color: #448AFF !important;
+    fill: #4CAF50 !important; }
+
+.theme-4 .layout-container > aside {
+  background-color: #263238;
+  color: #fff; }
+  .theme-4 .layout-container > aside > .sidebar-header {
+    background-color: #263238;
+    color: #fff; }
+
+.theme-4 .layout-container > header {
+  background-color: #4CAF50;
+  color: #fff; }
+
+.theme-4 .layout-container > main {
+  background-color: #ECEFF1; }
+
+.theme-4 .sidebar-header-logo > svg, .theme-4 .sidebar-header-logo > em,
+.theme-4 .nav-icon > svg,
+.theme-4 .nav-icon > em {
+  color: #4CAF50 !important;
+  fill: #a3d7a5 !important; }
+
+.theme-5 .layout-container > aside {
+  background-color: #263238;
+  color: #fff; }
+  .theme-5 .layout-container > aside > .sidebar-header {
+    background-color: #263238;
+    color: #fff; }
+
+.theme-5 .layout-container > header {
+  background-color: #03A9F4;
+  color: #fff; }
+
+.theme-5 .layout-container > main {
+  background-color: #ECEFF1; }
+
+.theme-5 .sidebar-header-logo > svg, .theme-5 .sidebar-header-logo > em,
+.theme-5 .nav-icon > svg,
+.theme-5 .nav-icon > em {
+  color: #03A9F4 !important;
+  fill: #79d4fd !important; }
+
+.theme-6 .layout-container > aside {
+  background-color: #263238;
+  color: #fff; }
+  .theme-6 .layout-container > aside > .sidebar-header {
+    background-color: #263238;
+    color: #fff; }
+
+.theme-6 .layout-container > header {
+  background-color: #9575CD;
+  color: #fff; }
+
+.theme-6 .layout-container > main {
+  background-color: #ECEFF1; }
+
+.theme-6 .sidebar-header-logo > svg, .theme-6 .sidebar-header-logo > em,
+.theme-6 .nav-icon > svg,
+.theme-6 .nav-icon > em {
+  color: #9575CD !important;
+  fill: #ddd3ef !important; }
+
+.theme-7 .layout-container > aside {
+  background-color: #fff;
+  color: #6C7177; }
+  .theme-7 .layout-container > aside > .sidebar-header {
+    background-color: #455A64;
+    color: #fff; }
+
+.theme-7 .layout-container > header {
+  background-color: #455A64;
+  color: #fff; }
+
+.theme-7 .layout-container > main {
+  background-color: #ECEFF1; }
+
+.theme-8 .layout-container > aside {
+  background-color: #263238;
+  color: #fff; }
+  .theme-8 .layout-container > aside > .sidebar-header {
+    background-color: #263238;
+    color: #fff; }
+
+.theme-8 .layout-container > header {
+  background-color: #fff;
+  color: #6C7177; }
+
+.theme-8 .layout-container > main {
+  background-color: #ECEFF1; }
+
+.theme-8 .sidebar-header-logo > svg, .theme-8 .sidebar-header-logo > em,
+.theme-8 .nav-icon > svg,
+.theme-8 .nav-icon > em {
+  color: #448AFF !important;
+  fill: #f1f1f1 !important; }
+
+.theme-9 .layout-container > aside {
+  background-color: #fff;
+  color: #6C7177; }
+  .theme-9 .layout-container > aside > .sidebar-header {
+    background-color: #fff;
+    color: #6C7177; }
+
+.theme-9 .layout-container > header {
+  background-color: #fff;
+  color: #6C7177; }
+
+.theme-9 .layout-container > main {
+  background-color: #ECEFF1; }
+
+.theme-9 .sidebar-header-logo > svg, .theme-9 .sidebar-header-logo > em,
+.theme-9 .nav-icon > svg,
+.theme-9 .nav-icon > em {
+  color: #738c98 !important;
+  fill: #90A4AE !important; }
+
+.preview-theme-1 .preview-header {
+  background-color: #1976D2; }
+
+.preview-theme-1 .preview-sidebar {
+  background-color: #fff; }
+
+.preview-theme-1 .preview-content {
+  background-color: #f1f2f3; }
+
+.preview-theme-2 .preview-header {
+  background-color: #1976D2; }
+
+.preview-theme-2 .preview-sidebar {
+  background-color: #263238; }
+
+.preview-theme-2 .preview-content {
+  background-color: #ECEFF1; }
+
+.preview-theme-3 .preview-header {
+  background-color: #37474F; }
+
+.preview-theme-3 .preview-sidebar {
+  background-color: #263238; }
+
+.preview-theme-3 .preview-content {
+  background-color: #37474F; }
+
+.preview-theme-4 .preview-header {
+  background-color: #4CAF50; }
+
+.preview-theme-4 .preview-sidebar {
+  background-color: #fff; }
+
+.preview-theme-4 .preview-content {
+  background-color: #ECEFF1; }
+
+.preview-theme-5 .preview-header {
+  background-color: #03A9F4; }
+
+.preview-theme-5 .preview-sidebar {
+  background-color: #fff; }
+
+.preview-theme-5 .preview-content {
+  background-color: #ECEFF1; }
+
+.preview-theme-6 .preview-header {
+  background-color: #9575CD; }
+
+.preview-theme-6 .preview-sidebar {
+  background-color: #fff; }
+
+.preview-theme-6 .preview-content {
+  background-color: #ECEFF1; }
+
+.preview-theme-7 .preview-header {
+  background-color: #455A64; }
+
+.preview-theme-7 .preview-sidebar {
+  background-color: #fff; }
+
+.preview-theme-7 .preview-content {
+  background-color: #ECEFF1; }
+
+.preview-theme-8 .preview-header {
+  background-color: #fff; }
+
+.preview-theme-8 .preview-sidebar {
+  background-color: #263238; }
+
+.preview-theme-8 .preview-content {
+  background-color: #ECEFF1; }
+
+.preview-theme-9 .preview-header {
+  background-color: #fff; }
+
+.preview-theme-9 .preview-sidebar {
+  background-color: #fff; }
+
+.preview-theme-9 .preview-content {
+  background-color: #ECEFF1; }

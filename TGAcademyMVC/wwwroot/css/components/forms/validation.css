@@ -1,0 +1,14 @@
+/**
+ * Forms Validation
+ */
+.form-validate .form-control.error {
+  border-color: #F44336; }
+
+.form-validate .form-control.valid, .form-validate .form-control.valid:focus {
+  border-color: #4CAF50; }
+
+.form-validate .has-error .form-control {
+  border-color: #F44336 !important; }
+
+.form-validate .c-checkbox input.error + span, .form-validate .c-radio input.error + span {
+  border-color: #F44336; }
