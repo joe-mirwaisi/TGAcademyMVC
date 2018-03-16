@@ -56,7 +56,7 @@ namespace TGAcademyMVC
             services.AddMvc();
 
             AuthenticationBuilder ab = new AuthenticationBuilder(services);
-
+            /*
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -97,7 +97,7 @@ namespace TGAcademyMVC
                     }
                 };
             });
-
+            */
             //Helpers.CreateRoles(services);
         }
 

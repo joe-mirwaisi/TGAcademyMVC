@@ -32,7 +32,7 @@ namespace TGAcademyMVC
             //initializing custom roles 
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-            string[] roleNames = { "Prospective_Student", "Current_Student", "Mentor", "Admin", };
+            string[] roleNames = { "Applicant", "Administrator", "Student", "Instructur", };
             Task<IdentityResult> roleResult;
 
             foreach (var roleName in roleNames)
@@ -48,10 +48,10 @@ namespace TGAcademyMVC
             }
 
             ApplicationUser[] testUsers = {
-                new ApplicationUser { UserName = "test_ps", Email = "test_ps@techtonicgroup.com", },
-                new ApplicationUser { UserName = "test_cs", Email = "test_cs@techtonicgroup.com", },
-                new ApplicationUser { UserName = "test_mentor", Email = "test_mentor@techtonicgroup.com", },
-                new ApplicationUser { UserName = "test_admin", Email = "test_admin@techtonicgroup.com", }
+                new ApplicationUser { UserName = "applicant", Email = "applicant@techtonicgroup.com", },
+                new ApplicationUser { UserName = "administrator", Email = "administrator@techtonicgroup.com", },
+                new ApplicationUser { UserName = "student", Email = "student@techtonicgroup.com", },
+                new ApplicationUser { UserName = "instructor", Email = "instructor@techtonicgroup.com", }
             };
 
             //Ensure you have these values in your appsettings.json file
