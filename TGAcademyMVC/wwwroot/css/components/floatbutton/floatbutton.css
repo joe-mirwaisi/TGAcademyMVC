@@ -1,0 +1,9 @@
+/**
+ * Float Button
+ */
+.floatbutton {
+  position: relative;
+  z-index: 1000; }
+  .floatbutton .mfb-component__button--child,
+  .floatbutton .mfb-component__button--main {
+    color: #fff; }

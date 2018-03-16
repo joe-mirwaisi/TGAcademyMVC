@@ -1,0 +1,95 @@
+/**
+ * Forms - Switch
+ */
+.switch .form-control {
+  padding-top: 7px;
+  margin-bottom: 0; }
+
+.switch * {
+  cursor: pointer; }
+
+.switch input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1; }
+
+.switch {
+  margin-right: 8px; }
+  .switch span {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 15px;
+    background-color: #9e9e9e;
+    border: 0;
+    border-radius: 8px;
+    vertical-align: middle;
+    -webkit-transition: all 0.2s cubic-bezier(0.35, 0, 0.25, 1) 0.1s;
+    -o-transition: all 0.2s cubic-bezier(0.35, 0, 0.25, 1) 0.1s;
+    transition: all 0.2s cubic-bezier(0.35, 0, 0.25, 1) 0.1s; }
+  .switch span:after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: -2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    border-radius: 400px;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+    -webkit-transition: all 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+    -o-transition: all 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+    transition: all 0.3s cubic-bezier(0.35, 0, 0.25, 1); }
+  .switch.switch-primary input:checked + span {
+    background-color: #448AFF; }
+    .switch.switch-primary input:checked + span:after {
+      background-color: #448AFF; }
+  .switch.switch-primary.switch-warn input:checked + span {
+    background-color: rgba(68, 138, 255, 0.5); }
+  .switch.switch-info input:checked + span {
+    background-color: #03A9F4; }
+    .switch.switch-info input:checked + span:after {
+      background-color: #03A9F4; }
+  .switch.switch-info.switch-warn input:checked + span {
+    background-color: rgba(3, 169, 244, 0.5); }
+  .switch.switch-danger input:checked + span {
+    background-color: #F44336; }
+    .switch.switch-danger input:checked + span:after {
+      background-color: #F44336; }
+  .switch.switch-danger.switch-warn input:checked + span {
+    background-color: rgba(244, 67, 54, 0.5); }
+  .switch.switch-warning input:checked + span {
+    background-color: #FFB300; }
+    .switch.switch-warning input:checked + span:after {
+      background-color: #FFB300; }
+  .switch.switch-warning.switch-warn input:checked + span {
+    background-color: rgba(255, 179, 0, 0.5); }
+  .switch.switch-success input:checked + span {
+    background-color: #4CAF50; }
+    .switch.switch-success input:checked + span:after {
+      background-color: #4CAF50; }
+  .switch.switch-success.switch-warn input:checked + span {
+    background-color: rgba(76, 175, 80, 0.5); }
+  .switch.switch-purple input:checked + span {
+    background-color: #7E57C2; }
+    .switch.switch-purple input:checked + span:after {
+      background-color: #7E57C2; }
+  .switch.switch-purple.switch-warn input:checked + span {
+    background-color: rgba(126, 87, 194, 0.5); }
+
+.switch input:checked + span {
+  background-color: #EC407A; }
+  .switch input:checked + span:after {
+    background-color: #EC407A; }
+
+.switch.switch-warn input:checked + span {
+  background-color: rgba(236, 64, 122, 0.5); }
+
+.switch input:checked + span:after {
+  left: 50%; }
+
+.switch input:disabled + span {
+  background-color: rgba(158, 158, 158, 0.5) !important; }
+  .switch input:disabled + span:after {
+    background-color: #fff !important; }

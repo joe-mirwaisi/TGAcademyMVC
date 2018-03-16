@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Techtonic Portal</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/template.css" type="text/css">
     <link rel="stylesheet" href="css/styleguide.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -97,19 +98,22 @@
     <hr>
     <!--Buttons-->
     <h2>Buttons</h2>
-    <button type="button" class="btn btn-outline-primary">Primary</button>
-    <button type="button" class="btn btn-outline-secondary">Secondary</button>
-    <button type="button" class="btn btn-outline-success">Success</button>
-    <button type="button" class="btn btn-outline-danger">Danger</button>
-    <button type="button" class="btn btn-outline-warning">Warning</button>
-    <button type="button" class="btn btn-outline-info">Info</button>
-
-    <button type="button" class="btn btn-block btn-outline-primary">Primary</button>
-    <button type="button" class="btn btn-block btn-outline-secondary">Secondary</button>
-    <button type="button" class="btn btn-block btn-outline-success">Success</button>
-    <button type="button" class="btn btn-block btn-outline-danger">Danger</button>
-    <button type="button" class="btn btn-block btn-outline-warning">Warning</button>
-    <button type="button" class="btn btn-block btn-outline-info">Info</button>
+    <div class="margin-bottom__10">
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+    </div>
+    <div class="margin-bottom__10">
+        <button type="button" class="btn btn-block btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-block btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-block btn-outline-success">Success</button>
+        <button type="button" class="btn btn-block btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-block btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-block btn-outline-info">Info</button>
+    </div>
 
     <hr>
     <!--Cards-->
@@ -137,10 +141,47 @@
         </div>
     </div>
 
+    <h4>Sizes</h4>
+    <h6>Small</h6>
+    <div class="dropdown">
+        <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+
+    <h6>Medium</h6>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+    <h6>Large</h6>
+    <div class="dropdown">
+        <button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+
     <hr>
     <!--Forms-->
     <h2>Forms</h2>
     <form>
+        <h4>Normal Field Entry</h4>
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -150,12 +191,15 @@
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
+        <h4>Checkbox</h4>
         <div class="form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
+        <br>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <h4>Radio Buttons</h4>
     <div class="form-check">
         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
         <label class="form-check-label" for="exampleRadios1">
@@ -174,6 +218,42 @@
             Disabled radio
         </label>
     </div>
+
+    <form class="card b0 form-validate" id="user-signup" action="" name="createForm" novalidate="">
+        <div class="card-offset pb0">
+            <div class="card-offset-item text-right">
+                <div class="btn btn-success btn-circle btn-lg hidden" id="form-ok"><em class="ion-checkmark-round"></em></div>
+            </div>
+        </div>
+        <div class="card-heading">
+            <div class="card-title text-center">Create account</div>
+        </div>
+        <div class="card-body">
+            <div class="mda-form-group float-label mda-input-group">
+                <div class="mda-form-control">
+                    <input class="form-control" type="email" name="accountName" required="">
+                    <div class="mda-form-control-line"></div>
+                    <label>Email address</label>
+                </div><span class="mda-input-group-addon"><em class="ion-ios-email-outline icon-lg"></em></span>
+            </div>
+            <div class="mda-form-group float-label mda-input-group">
+                <div class="mda-form-control">
+                    <input class="form-control" id="account-password" type="password" name="accountPassword" required="">
+                    <div class="mda-form-control-line"></div>
+                    <label>Password</label>
+                </div><span class="mda-input-group-addon"><em class="ion-ios-locked-outline icon-lg"></em></span>
+            </div>
+            <div class="mda-form-group float-label mda-input-group">
+                <div class="mda-form-control">
+                    <input class="form-control" type="password" name="accountPasswordCheck" required="">
+                    <div class="mda-form-control-line"></div>
+                    <label>Confirm password</label>
+                </div><span class="mda-input-group-addon"><em class="ion-ios-locked-outline icon-lg"></em></span>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-flat" type="submit">Create</button>
+        <div class="card-body bg-gray-lighter text-center text-sm"><span class="spr">By registering I accept the</span><a class="spr" href="#">Terms of Service</a><span class="spr">and</span><a class="spr" href="#">Privacy</a></div>
+    </form>
 
     <hr>
     <!--Jumbotron-->

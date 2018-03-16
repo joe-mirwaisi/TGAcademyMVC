@@ -1,0 +1,37 @@
+/**
+ * Vector Maps
+ */
+.vector-map {
+  height: 400px; }
+  .vector-map svg {
+    width: 100%; }
+  .vector-map .jvectormap-container {
+    background-color: transparent !important; }
+  .vector-map .jvectormap-zoomin,
+  .vector-map .jvectormap-zoomout {
+    position: absolute;
+    left: 10px;
+    width: 22px;
+    height: 22px;
+    border-radius: 2px;
+    background: #515253;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    line-height: 10px;
+    text-align: center; }
+  .vector-map .jvectormap-zoomin {
+    top: 10px; }
+  .vector-map .jvectormap-zoomout {
+    top: 30px; }
+
+.jvectormap-label {
+  position: absolute;
+  display: none;
+  border: solid 1px #313232;
+  border-radius: 2px;
+  background: #313232;
+  color: white;
+  padding: 3px 6px;
+  opacity: 0.9;
+  z-index: 11; }

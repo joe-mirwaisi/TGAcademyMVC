@@ -1,0 +1,13 @@
+/**
+ * Google Maps
+ */
+.gmap,
+.angular-google-map-container {
+  height: 300px; }
+  .gmap.gmap-sm,
+  .angular-google-map-container.gmap-sm {
+    height: 150px; }
+
+.fh .angular-google-map,
+.fh .angular-google-map-container {
+  height: 100% !important; }

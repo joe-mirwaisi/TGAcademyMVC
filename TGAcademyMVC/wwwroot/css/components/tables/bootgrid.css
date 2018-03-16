@@ -1,0 +1,41 @@
+/**
+ * Tables - Bootgrid
+ */
+.bootgrid .table > thead > tr > td.active, .bootgrid .table > tbody > tr > td.active, .bootgrid .table > tfoot > tr > td.active, .bootgrid .table > thead > tr > th.active, .bootgrid .table > tbody > tr > th.active, .bootgrid .table > tfoot > tr > th.active, .bootgrid .table > thead > tr.active > td, .bootgrid .table > tbody > tr.active > td, .bootgrid .table > tfoot > tr.active > td, .bootgrid .table > thead > tr.active > th, .bootgrid .table > tbody > tr.active > th, .bootgrid .table > tfoot > tr.active > th {
+  background-color: #ECEFF1; }
+
+.bootgrid-header .search .form-control {
+  border: 0 !important;
+  border-bottom: 1px solid rgba(162, 162, 162, 0.12) !important;
+  border-radius: 0;
+  background-color: transparent !important; }
+  .bootgrid-header .search .form-control:focus {
+    border-bottom-color: #448AFF !important; }
+
+.bootgrid-header .search .input-group-addon {
+  border: 0 !important;
+  background-color: transparent; }
+
+.bootgrid-header .search.form-group {
+  float: left; }
+
+.bootgrid-header .dropdown > .btn {
+  border: 0; }
+  .bootgrid-header .dropdown > .btn:hover, .bootgrid-header .dropdown > .btn:focus {
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.014);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.014); }
+
+.bootgrid-header .dropdown .dropdown-item {
+  color: #555; }
+
+.bootgrid-header .dropdown .active > .dropdown-item {
+  color: #fff; }
+
+.bootgrid-table th > .column-header-anchor {
+  color: inherit; }
+
+.bootgrid-table th:hover, .bootgrid-table th:active {
+  background-color: rgba(162, 162, 162, 0.12); }
+
+.bootgrid .table > thead > tr > td.active, .bootgrid .table > tbody > tr > td.active, .bootgrid .table > tfoot > tr > td.active, .bootgrid .table > thead > tr > th.active, .bootgrid .table > tbody > tr > th.active, .bootgrid .table > tfoot > tr > th.active, .bootgrid .table > thead > tr.active > td, .bootgrid .table > tbody > tr.active > td, .bootgrid .table > tfoot > tr.active > td, .bootgrid .table > thead > tr.active > th, .bootgrid .table > tbody > tr.active > th, .bootgrid .table > tfoot > tr.active > th {
+  background-color: rgba(162, 162, 162, 0.12); }

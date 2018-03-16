@@ -1,0 +1,74 @@
+/**
+ * Spinners (Loader.CSS)
+ */
+.loader-primary .ball-pulse > div,
+.loader-primary .ball-grid-pulse > div,
+.loader-primary .square-spin > div,
+.loader-primary .ball-pulse-rise > div,
+.loader-primary .ball-rotate > div,
+.loader-primary .ball-rotate > div:before, .loader-primary .ball-rotate > div:after,
+.loader-primary .cube-transition > div,
+.loader-primary .ball-zig-zag > div,
+.loader-primary .ball-zig-zag-deflect > div,
+.loader-primary .ball-triangle-path > div,
+.loader-primary .ball-scale > div,
+.loader-primary .line-scale > div,
+.loader-primary .line-scale-party > div,
+.loader-primary .ball-scale-multiple > div,
+.loader-primary .ball-pulse-sync > div,
+.loader-primary .ball-beat > div,
+.loader-primary .line-scale-pulse-out > div,
+.loader-primary .line-scale-pulse-out-rapid > div,
+.loader-primary .ball-spin-fade-loader > div,
+.loader-primary .line-spin-fade-loader > div,
+.loader-primary .triangle-skew-spin > div,
+.loader-primary .ball-grid-beat > div,
+.loader-primary .semi-circle-spin > div {
+  background-color: #448AFF; }
+
+.loader-primary .ball-clip-rotate-multiple {
+  width: 1px; }
+  .loader-primary .ball-clip-rotate-multiple > div {
+    border-color: #448AFF transparent #448AFF transparent; }
+    .loader-primary .ball-clip-rotate-multiple > div:last-child {
+      border-color: transparent #448AFF transparent #448AFF; }
+
+.loader-primary .ball-clip-rotate > div {
+  border-color: #448AFF;
+  border-bottom-color: transparent; }
+
+.loader-primary .ball-clip-rotate-pulse > div:first-child {
+  background-color: #448AFF;
+  top: 5px;
+  left: -8px; }
+
+.loader-primary .ball-clip-rotate-pulse > div:last-child {
+  border-color: #448AFF transparent #448AFF transparent; }
+
+.loader-primary .square-spin > div,
+.loader-primary .ball-scale-ripple > div,
+.loader-primary .ball-scale-ripple-multiple > div {
+  border-color: #448AFF; }
+
+.loader-primary .pacman > div:first-of-type {
+  border-top-color: #448AFF;
+  border-left-color: #448AFF;
+  border-bottom-color: #448AFF; }
+
+.loader-primary .pacman > div:nth-child(2) {
+  border-top-color: #448AFF;
+  border-left-color: #448AFF;
+  border-bottom-color: #448AFF; }
+
+.loader-primary .pacman > div:nth-child(3), .loader-primary .pacman > div:nth-child(4), .loader-primary .pacman > div:nth-child(5), .loader-primary .pacman > div:nth-child(6) {
+  background-color: #448AFF; }
+
+.loader {
+  display: inline-block; }
+
+.loader-demo {
+  padding: 20px 0;
+  height: 120px;
+  text-align: center; }
+  .loader-demo > .loader-inner {
+    display: inline-block; }
