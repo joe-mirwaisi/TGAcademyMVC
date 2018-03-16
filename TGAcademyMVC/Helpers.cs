@@ -26,6 +26,7 @@ namespace TGAcademyMVC
     {
         public static void CreateRoles(IServiceCollection services)
         {
+            /*
             var serviceProvider = services.BuildServiceProvider();
 
             //initializing custom roles 
@@ -72,6 +73,7 @@ namespace TGAcademyMVC
                 var assignToRole = userManager.AddToRoleAsync(testUsers[i], roleNames[i]);
                 assignToRole.Wait();
             }
+            */
         }
     }
 }
