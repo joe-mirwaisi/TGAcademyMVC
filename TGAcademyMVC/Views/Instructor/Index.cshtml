@@ -5,13 +5,62 @@
 }
 
 @section Sidebar {
-<ul>
-    <li><a class="sb-link">Lectures</a></li>
-    <li><a class="sb-link">Excersies</a></li>
-    <li><a class="sb-link">Course Schedule</a></li>
-    <li><a class="sb-link">Student Reviews</a></li>
-</ul>
+    <ul>
+        <li><a class="sb-link">Lectures</a></li>
+        <li><a class="sb-link">Excersies</a></li>
+        <li><a class="sb-link">Course Schedule</a></li>
+        <li><a class="sb-link">Student Reviews</a></li>
+    </ul>
 }
 
 <h2>Instructor Dashboard</h2>
 
+<script>
+
+    $(document).ready(function () {
+        $('#calendar').fullCalendar({
+            defaultDate: '2018-03-12',
+            editable: true,
+            weekends: false,
+            eventLimit: true, // allow "more" link when too many events
+            events: [
+                {
+                    title: 'HTML \ CSS',
+                    start: '2018-03-07',
+                    end: '2018-03-21'
+                },
+                {
+                    title: 'Javascript',
+                    start: '2018-03-21',
+                    end: '2018-04-04'
+                },
+                {
+                    title: 'Node and Backend Servers',
+                    start: '2018-04-04',
+                    end: '2018-04-18'
+                },
+                {
+                    title: 'SQL and noSQL Datastores',
+                    start: '2018-04-18',
+                    end: '2018-05-12'
+                }
+            ]
+        });
+
+    });
+
+</script>
+<style>    
+    #calendar {
+        max-width: 900px;
+        margin: 0 auto;
+        font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+        font-size: 14px;
+    }
+
+    .fc-event {
+        background-color: #7B9F49;
+    }
+</style>
+
+<div id='calendar'></div>
