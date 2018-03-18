@@ -33,3 +33,56 @@
         display: none;
     }
 }
+
+/*Remove after demo*/
+.icon {
+    padding-top:10px;
+}
+
+.profile-image {
+    height:82px;
+    width:82px;
+}
+
+.sidebar-header {
+    text-align:center;
+}
+
+.navbar-header {
+    text-align:center;
+    width:100%;
+}
+
+.navbar-link, .navbar-link:hover {
+    color: white;
+}
+
+
+.collapse-level-title {
+    color: #FFFFFF !important;
+    background-color: #5F842C !important;
+}
+
+.collapse-title-bkg {
+    background-color: #5F842C;
+}
+
+.collapse-title {
+    color: #FFFFFF;
+}
+
+.input-group-text {
+    background-color: #A0C074;
+}
+
+.body-content {
+    position:relative;
+    top: -80px;
+}
+
+
+@media (min-width: 992px) {
+    .body-content {
+        padding-left:225px;
+    }    
+}
